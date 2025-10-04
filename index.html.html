@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>All-in-One Office — خدماتنا</title>
+  <style>
+    :root{
+      --blue-dark:#0d3a4a;
+      --blue-mid:#1d5c85;
+      --gray:#5a6670;
+      --orange:#ff7b39;
+      --green:#2ca24c;
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      font-family: 'Segoe UI', Tahoma, system-ui, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#edf2f6);color:var(--blue-dark);}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;background:transparent;backdrop-filter:blur(6px)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+    .brand h1{margin:0;font-size:22px}
+    nav a{margin-left:18px;color:var(--gray);text-decoration:none;font-weight:600;transition:.3s}
+    nav a:hover{color:var(--orange)}
+
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:30px;padding:70px 40px;align-items:center}
+    .hero-left{padding:32px;background:linear-gradient(180deg,rgba(18,58,90,0.06),rgba(42,92,133,0.03));border-radius:20px;box-shadow:0 8px 28px rgba(0,0,0,0.05)}
+    .kicker{display:inline-block;background:var(--orange);color:#fff;padding:6px 14px;border-radius:10px;font-weight:700;margin-bottom:16px;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
+    .hero-left h2{margin:6px 0 14px;font-size:36px;line-height:1.3}
+    .hero-left p{color:var(--gray);line-height:1.7;font-size:16px}
+    .cta{margin-top:22px;display:flex;gap:14px;flex-wrap:wrap}
+    .btn-primary{background:var(--blue-dark);color:#fff;padding:14px 20px;border-radius:12px;border:none;cursor:pointer;font-weight:700;transition:.3s;text-decoration:none;display:inline-block}
+    .btn-primary:hover{background:var(--orange)}
+    .btn-outline{background:transparent;padding:14px 20px;border-radius:12px;border:2px solid var(--blue-mid);color:var(--blue-mid);cursor:pointer;font-weight:600;transition:.3s;text-decoration:none;display:inline-block}
+    .btn-outline:hover{border-color:var(--orange);color:var(--orange)}
+
+    .hero-right{display:flex;flex-direction:column;gap:16px}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 20px rgba(18,58,90,0.06);transition:.3s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,0.08)}
+    .card h4{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--gray);font-size:14px}
+
+    .packages{padding:60px 30px;background:#f9fbfd}
+    .packages h2{text-align:center;font-size:26px;margin-bottom:30px;color:var(--blue-dark)}
+    .packages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+    .package{background:#fff;padding:24px;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);text-align:center;transition:.3s}
+    .package:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+    .package h3{margin:12px 0;color:var(--blue-dark)}
+    .package ul{list-style:none;padding:0;margin:0;color:var(--gray);line-height:1.7;font-size:14px;text-align:right}
+    .package button{margin-top:18px;color:#fff;border:none;padding:10px 18px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:600}
+
+    .about-contact{display:grid;grid-template-columns:1fr 420px;gap:30px;padding:40px;align-items:start}
+    .about{background:var(--card);padding:24px;border-radius:14px;box-shadow:0 6px 20px rgba(18,58,90,0.05);line-height:1.7}
+    .about h3{margin-top:0;font-size:20px}
+    .contact{background:linear-gradient(180deg,#fff,#f8fbfc);padding:24px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.03);text-align:center}
+    .contact .line{display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;background:rgba(18,58,90,0.03);margin-bottom:14px;text-align:right}
+
+    .qr{margin-top:20px;}
+    .qr img{width:160px;height:auto;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+
+    footer{padding:20px 40px;color:var(--gray);display:flex;justify-content:space-between;font-size:14px;background:#f1f5f9}
+
+    /* responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr;}
+      .about-contact{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">AIO</div>
+      <div>
+        <h1>All-in-One Office</h1>
+        <div style="color:var(--gray);font-size:13px">مكتب خدمات أونلاين — كل شيء في مكان واحد</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#packages">الباقات</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="kicker">خدمات شاملة</div>
+      <h2>حلول رقمية، أكاديمية وإدارية — في مكان واحد</h2>
+      <p>نقدّم خدمات احترافية: كتابة سيرة ذاتية ورسائل، تصميم منشورات وبطاقات عمل، بحوث جامعية، وتقييم مواقع مشبوهة. كل شيء أونلاين وبجودة عالية.</p>
+      <div class="cta">
+        <a href="https://wa.me/213656491823" target="_blank" class="btn-primary">💬 اطلب عبر واتساب</a>
+        <a href="#packages" class="btn-outline">📦 اكتشف باقاتنا</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="card">
+        <h4>⚡ سرعة التنفيذ</h4>
+        <p>نسلم المشاريع الصغيرة خلال 24-72 ساعة. جودة وتواصل دائم مع الزبون.</p>
+      </div>
+      <div class="card">
+        <h4>💳 دفع آمن</h4>
+        <p>بريدي موب، CCP، بايسيرا، تحويل بنكي. فاتورة PDF بعد الدفع.</p>
+      </div>
+      <div class="card">
+        <h4>🤝 دعم ما بعد الخدمة</h4>
+        <p>تعديلات مجانية بسيطة خلال 3 أيام بعد التسليم.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" class="packages">
+    <h2>📦 اكتشف باقاتنا</h2>
+    <div class="packages-grid">
+      <div class="package">
+        <div style="font-size:34px">📄</div>
+        <h3>الخدمات الإدارية</h3>
+        <ul>
+          <li>✔ CV احترافي</li>
+          <li>✔ رسالة تحفيزية</li>
+          <li>✔ ترجمة و تفريغ صوتي</li>
+        </ul>
+        <a href="https://wa.me/213656491823?text=مرحبا، أريد طلب خدمة من الباقة الإدارية" target="_blank">
+          <button style="background:var(--gray)">طلب الخدمة عبر واتساب</button>
+        </a>
+      </div>
+
+      <div class="package">
+        <div style="font-size:34px">🎨</div>
+        <h3>الخدمات الرقمية</h3>
+        <ul>
+          <li>✔ تصميم بطاقة عمل + شعار</li>
+          <li>✔ تصميم بوستات ومنشورات</li>
+          <li>✔ تحويل فيديو إلى نص</li>
+        </ul>
+        <a href="https://wa.me/213656491823?text=مرحبا، أريد طلب خدمة من الباقة الرقمية" target="_blank">
+          <button style="background:var(--blue-mid)">طلب الخدمة عبر واتساب</button>
+        </a>
+      </div>
+
+      <div class="package">
+        <div style="font-size:34px">📚</div>
+        <h3>الخدمات الجامعية</h3>
+        <ul>
+          <li>✔ بحوث أكاديمية</li>
+          <li>✔ عروض PowerPoint</li>
+          <li>✔ مذكرات (تنسيق + مراجع)</li>
+          <li>✔ تلخيص كتب ومقالات</li>
+        </ul>
+        <a href="https://wa.me/213656491823?text=مرحبا، أريد طلب خدمة من الباقة الجامعية" target="_blank">
+          <button style="background:var(--orange)">طلب الخدمة عبر واتساب</button>
+        </a>
+      </div>
+
+      <div class="package">
+        <div style="font-size:34px">🔒</div>
+        <h3>الأمان والوساطة</h3>
+        <ul>
+          <li>✔ فحص مواقع مشبوهة</li>
+          <li>✔ تقييم مصداقية خدمات</li>
+          <li>✔ وساطة بين الزبون والمزود</li>
+        </ul>
+        <a href="https://wa.me/213656491823?text=مرحبا، أريد طلب خدمة من باقة الأمان والوساطة" target="_blank">
+          <button style="background:var(--green)">طلب الخدمة عبر واتساب</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-contact">
+    <div id="about" class="about">
+      <h3>عن All-in-One Office</h3>
+      <p>مكتب خدمات أونلاين متخصص لتلبية احتياجات الطلبة، الموظفين والمستقلين. نعمل بسرعة واحترافية وبأسعار مناسبة. هدفنا تبسيط عملك وتقديم نتائج عملية قابلة للتطبيق.</p>
+      <ul style="color:var(--gray)">
+        <li>✔ خبرة في الكتابة الأكاديمية والتصميم.</li>
+        <li>✔ تواصل دائم مع الزبائن وتعديلات بعد التسليم.</li>
+        <li>✔ سرية تامة للملفات والمعلومات.</li>
+      </ul>
+    </div>
+
+    <aside id="contact" class="contact">
+      <h3>تواصل معنا</h3>
+      <div class="line"><strong>📞</strong><div><div><strong>واتساب:</strong> <a href="https://wa.me/213656491823" target="_blank">+213656491823</a></div><div style="color:var(--gray);font-size:13px">(اضغط للرسالة الفورية)</div></div></div>
+      <div class="line"><strong>📧</strong><div><strong>بريد:</strong> blfdsalah@gmail.com</div></div>
+      <div style="margin-top:8px;color:var(--gray);font-size:13px">أو املأ النموذج السريع:</div>
+      <form style="margin-top:12px;display:flex;flex-direction:column;gap:10px" onsubmit="sendWhatsAppMessage(event)">
+        <input id="name" placeholder="الإسم" style="padding:12px;border-radius:10px;border:1px solid #e6eef6" />
+        <input id="contact" placeholder="البريد أو رقم واتساب" style="padding:12px;border-radius:10px;border:1px solid #e6eef6" />
+        <textarea id="message" placeholder="ماذا تحتاج؟" style="padding:12px;border-radius:10px;border:1px solid #e6eef6;min-height:90px"></textarea>
+        <button type="submit" class="btn-primary">📩 أرسل عبر واتساب</button>
+      </form>
+      <div class="qr">
+        <p style="margin:10px 0;color:var(--gray);font-size:14px">تابعنا على إنستغرام:</p>
+        <img src="aio.office_qr (1).png" alt="Instagram QR">
+        <div style="margin-top:6px;font-weight:600;color:var(--blue-mid)">@aio.office</div>
+      </div>
+    </aside>
+  </section>
+
+  <footer>
+    <div>© 2025 All-in-One Office — كل الحقوق محفوظة</div>
+    <div style="color:var(--gray)">تصميم عصري • تواصل: +213656491823</div>
+  </footer>
+
+  <!-- زر واتساب ثابت -->
+  <a href="https://wa.me/213656491823" target="_blank" 
+     style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;
+            width:56px;height:56px;border-radius:50%;display:flex;align-items:center;
+            justify-content:center;font-size:28px;box-shadow:0 4px 10px rgba(0,0,0,0.25);
+            text-decoration:none;z-index:1000;transition:.3s">
+    💬
+  </a>
+
+  <div id="welcome-popup" 
+     style="position:fixed;bottom:100px;right:20px;background:#fff;padding:14px 18px;
+            border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.2);font-size:14px;
+            color:#333;z-index:2000;max-width:240px;display:none;">
+    💡 مرحبًا! تواصل معنا مباشرة عبر واتساب أو الإيميل.
+  </div>
+
+  <script>
+    window.addEventListener("load", function() {
+      const popup = document.getElementById("welcome-popup");
+      if (!localStorage.getItem("popupShown")) {
+        popup.style.display = "block";
+        setTimeout(() => { popup.style.display = "none"; }, 6000);
+        localStorage.setItem("popupShown", "true");
+      }
+    });
+
+    function sendWhatsAppMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const contact = document.getElementById("contact").value;
+      const message = document.getElementById("message").value;
+      const text = `مرحبا، اسمي ${name}. بياناتي: ${contact}. أحتاج: ${message}`;
+      window.open(`https://wa.me/213656491823?text=${encodeURIComponent(text)}`, "_blank");
+    }
+  </script>
+</body>
+</html>
